@@ -39,7 +39,7 @@ class TestDistValid(unittest.TestCase):
         ]
         dist_validator = environment["function_dist_valid"]
         for i, dist in enumerate(bad_distributions):
-            self.assertEqual(dist_validator(dist), False, msg=f"expected True for bad distribution #{i} {dist}")
+            self.assertEqual(dist_validator(dist), False, msg=f"returned True for bad distribution #{i} {dist}")
         for i, dist in enumerate(good_distributions):
             self.assertEqual(dist_validator(dist), True, msg=f"returned False for good distribution #{i} {dist}")
 
